@@ -99,10 +99,19 @@ const Paste = () => {
                       </button>
                     </div>
 
-                    <div className="gap-x-2 flex ">
-                      <Calendar className="text-white font-bold" size={20} />
-                      {FormatDate(paste?.createdAt)}
-                    </div>
+                        <div className="gap-x-2 flex">
+                           <Calendar className="text-white font-bold" size={20} />
+                           {new Date(paste?.createdAt).toLocaleString("en-US", {
+                           year: "numeric",
+                           month: "short",
+                           day: "numeric",
+                           hour: "2-digit",
+                           minute: "2-digit",
+                           second: "2-digit",
+                           hour12: true,
+                              })}
+                       </div>
+
                   </div>
                 </div>
               ))
