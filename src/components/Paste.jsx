@@ -77,16 +77,20 @@ const Paste = () => {
                         />
                       </button>
 
-                      <button className="bg-blue-500 text-white font-bold p-2 rounded-[0.2rem]  hover:bg-transparent group hover:border-blue-500">
+                       {/* <button className="bg-blue-500 text-white font-bold p-2 rounded-[0.2rem]  hover:bg-transparent group hover:border-blue-500">
                         <a href={`/pastes/${paste?._id}`} target="_blank">
                           <Eye
                             className="text-black group-hover:text-orange-500"
                             size={20}
                           />
                         </a>
-                      </button>
+                      </button> */}
+
+
+
+                      
                       <button
-                        className="bg-yellow-400 text-white font-bold p-2 rounded-[0.2rem]  hover:bg-transparent group hover:border-green-500"
+                        className="bg-blue-500 text-white font-bold p-2 rounded-[0.2rem]  hover:bg-transparent group hover:border-green-500"
                         onClick={() => {
                           navigator.clipboard.writeText(paste?.content);
                           toast.success("Copied to Clipboard");
