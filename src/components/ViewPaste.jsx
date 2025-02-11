@@ -22,7 +22,7 @@ const ViewPaste = () => {
           placeholder="Title"
           value={paste.title}
           disabled
-          className="w-full text-black border border-input rounded-md p-2"
+          className="w-full text-white bg-black font-bold text-xl border border-input rounded-md p-2"
         />
         <div
           className={`w-full flex flex-col items-start relative rounded bg-opacity-10 border border-[rgba(128,121,121,0.3)] backdrop-blur-2xl`}
@@ -45,7 +45,7 @@ const ViewPaste = () => {
             >
               {/*Copy  button */}
               <button
-                className={`flex justify-center items-center  transition-all duration-300 ease-in-out group`}
+                className={`flex justify-center items-center bg-yellow-500 p-2 rounded-md  transition-all duration-300 ease-in-out group`}
                 onClick={() => {
                   navigator.clipboard.writeText(paste.content);
                   toast.success("Copied to Clipboard");
@@ -61,7 +61,7 @@ const ViewPaste = () => {
             value={paste.content}
             disabled
             placeholder="Write Your Content Here...."
-            className="w-full p-3  focus-visible:ring-0"
+            className="font-bold text-white bg-black text-lg w-full h-96 p-4  focus-visible:ring-0"
             style={{
               caretColor: "#000",
             }}
